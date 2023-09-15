@@ -19,4 +19,30 @@ const userSchema = new mongoose.Schema({
     }
 });
 
+const appUserSchema=new mongoose.Schema({
+    id: {
+        type: 'string',
+        require: true,
+    },
+    name: {
+        type: 'string',
+        require: true,
+    },
+   
+   email:{
+        type:'string',
+        require: true,
+    },
+    password:{
+        
+        type:'string',
+        require: true,
+    },
+    ResetKey:{
+        type:'string',
+        require: true,
+    }
+});
+
 export const user = mongoose.model('users',userSchema);
+export const AppUserModel = mongoose.model('app-users ',appUserSchema);
