@@ -10,7 +10,7 @@ authRouter.post('/register', async (req, res) => {
 
     try {
         const payload = req.body;
-        const appUser = await AppUserModel.findOne({ email: payload.email }, { id: 1, name: 1, email: 1, _id: 0 });
+        const appUser = await AppUserModel.findOne({ email: payload.email }, { id: 1, Name: 1, email: 1, _id: 0 });
         if (appUser) {
             res.status(409).send({ msg: 'user already exits' });
             return;

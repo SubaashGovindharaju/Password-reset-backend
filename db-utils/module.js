@@ -24,7 +24,7 @@ const appUserSchema=new mongoose.Schema({
         type: 'string',
         require: true,
     },
-    name: {
+    Name: {
         type: 'string',
         require: true,
     },
